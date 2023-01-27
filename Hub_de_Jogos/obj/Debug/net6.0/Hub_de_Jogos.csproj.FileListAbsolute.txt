@@ -1,0 +1,15 @@
+C:\Users\carol\OneDrive\Área de Trabalho\CursoIma\Projetos Visual Studio\Hub_de_Jogos\Hub_de_Jogos\bin\Debug\net6.0\Hub_de_Jogos.exe
+C:\Users\carol\OneDrive\Área de Trabalho\CursoIma\Projetos Visual Studio\Hub_de_Jogos\Hub_de_Jogos\bin\Debug\net6.0\Hub_de_Jogos.deps.json
+C:\Users\carol\OneDrive\Área de Trabalho\CursoIma\Projetos Visual Studio\Hub_de_Jogos\Hub_de_Jogos\bin\Debug\net6.0\Hub_de_Jogos.runtimeconfig.json
+C:\Users\carol\OneDrive\Área de Trabalho\CursoIma\Projetos Visual Studio\Hub_de_Jogos\Hub_de_Jogos\bin\Debug\net6.0\Hub_de_Jogos.dll
+C:\Users\carol\OneDrive\Área de Trabalho\CursoIma\Projetos Visual Studio\Hub_de_Jogos\Hub_de_Jogos\bin\Debug\net6.0\Hub_de_Jogos.pdb
+C:\Users\carol\OneDrive\Área de Trabalho\CursoIma\Projetos Visual Studio\Hub_de_Jogos\Hub_de_Jogos\obj\Debug\net6.0\Hub_de_Jogos.csproj.AssemblyReference.cache
+C:\Users\carol\OneDrive\Área de Trabalho\CursoIma\Projetos Visual Studio\Hub_de_Jogos\Hub_de_Jogos\obj\Debug\net6.0\Hub_de_Jogos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carol\OneDrive\Área de Trabalho\CursoIma\Projetos Visual Studio\Hub_de_Jogos\Hub_de_Jogos\obj\Debug\net6.0\Hub_de_Jogos.AssemblyInfoInputs.cache
+C:\Users\carol\OneDrive\Área de Trabalho\CursoIma\Projetos Visual Studio\Hub_de_Jogos\Hub_de_Jogos\obj\Debug\net6.0\Hub_de_Jogos.AssemblyInfo.cs
+C:\Users\carol\OneDrive\Área de Trabalho\CursoIma\Projetos Visual Studio\Hub_de_Jogos\Hub_de_Jogos\obj\Debug\net6.0\Hub_de_Jogos.csproj.CoreCompileInputs.cache
+C:\Users\carol\OneDrive\Área de Trabalho\CursoIma\Projetos Visual Studio\Hub_de_Jogos\Hub_de_Jogos\obj\Debug\net6.0\Hub_de_Jogos.dll
+C:\Users\carol\OneDrive\Área de Trabalho\CursoIma\Projetos Visual Studio\Hub_de_Jogos\Hub_de_Jogos\obj\Debug\net6.0\refint\Hub_de_Jogos.dll
+C:\Users\carol\OneDrive\Área de Trabalho\CursoIma\Projetos Visual Studio\Hub_de_Jogos\Hub_de_Jogos\obj\Debug\net6.0\Hub_de_Jogos.pdb
+C:\Users\carol\OneDrive\Área de Trabalho\CursoIma\Projetos Visual Studio\Hub_de_Jogos\Hub_de_Jogos\obj\Debug\net6.0\Hub_de_Jogos.genruntimeconfig.cache
+C:\Users\carol\OneDrive\Área de Trabalho\CursoIma\Projetos Visual Studio\Hub_de_Jogos\Hub_de_Jogos\obj\Debug\net6.0\ref\Hub_de_Jogos.dll

@@ -10,15 +10,12 @@ namespace Hub_de_Jogos.Entities
     {
         public string[,] board;
 
-        public virtual void InitializeGameBoard()
-        {
-
-        }
-
         public virtual void DisplayGameBoard()
         {
 
         }
+
+        
 
     }
 }

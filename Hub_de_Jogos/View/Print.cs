@@ -8,28 +8,28 @@ namespace Hub_de_Jogos.View
 {
     public class Print
     {
-        public void CorAvisoNegativo(string texto)
+        public void RedWarning(string texto)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(texto);
             Console.ResetColor();
         }
 
-        public void CorAvisoPositivo(string texto)
+        public void GreenWarning(string texto)
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(texto);
             Console.ResetColor();
         }
 
-        public void InicioHub()
+        public void WelcomeHub()
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("Bem-vindo(a) ao Hub de Jogos!\n");
             Console.ResetColor();
         }
 
-        public void SaidaHub()
+        public void ExitHub()
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("\nEncerrando o Hub de Jogos... Muito obrigada por passar este tempo com nós!\n");
@@ -37,7 +37,7 @@ namespace Hub_de_Jogos.View
             Console.ResetColor();
         }
 
-        public void ApresentarMenuInicial()
+        public void ShowMainMenu()
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("\n Menu Principal \n");
@@ -52,7 +52,7 @@ namespace Hub_de_Jogos.View
             Console.Write("Digite a opção desejada: ");
         }
 
-        public void ApresentarMenuJogadores()
+        public void ShowPlayersMenu()
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("\n Menu Jogadores \n");
