@@ -1,6 +1,7 @@
 ﻿using System;
 using Hub_de_Jogos.View;
 using Hub_de_Jogos.Entities;
+using Hub_de_Jogos.Service;
 
 
 namespace Hub_de_Jogos
@@ -9,11 +10,7 @@ namespace Hub_de_Jogos
     {
         public static void Main(string[] args)
         {
-            GameBoardTicTacToe a = new GameBoardTicTacToe();
-
-
-            a.DisplayGameBoard();
-
+                        
 
         }
     }

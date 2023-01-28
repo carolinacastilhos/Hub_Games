@@ -12,29 +12,27 @@ namespace Hub_de_Jogos.Entities
 
         public override void DisplayGameBoard()
         {
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine(" ___  ___  ___ ");
-            Console.ResetColor();
+            Console.WriteLine(" ___  ___  ___ ");            
 
             for (int row = 0; row < 3; row++)
             {                
                 for (int col = 0; col < 3; col++)
-                {
-                    Console.ForegroundColor = ConsoleColor.Magenta;
+                {                    
                     Console.Write("| ");
-                    Console.ResetColor();
                     Console.Write($"{board[row, col]}");
-                    Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.Write(" |");
-                    Console.ResetColor();
                 }
 
                 Console.WriteLine();
-                Console.ForegroundColor= ConsoleColor.Magenta;
-                Console.WriteLine("|---||---||---|");
-                Console.ResetColor();
+                Console.WriteLine("|---||---||---|");                
             }
         }
-        
+
+        public override void PlayersMove()
+        {
+            
+        }
+
+
     }
 }

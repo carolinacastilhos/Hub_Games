@@ -8,62 +8,68 @@ namespace Hub_de_Jogos.View
 {
     public class Print
     {
-        public void RedWarning(string texto)
+        public void RedWarning(string text)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(texto);
+            Console.WriteLine(text);
             Console.ResetColor();
         }
 
-        public void GreenWarning(string texto)
+        public void GreenWarning(string text)
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(texto);
+            Console.WriteLine(text);
             Console.ResetColor();
         }
 
         public void WelcomeHub()
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("Bem-vindo(a) ao Hub de Jogos!\n");
+            Console.WriteLine("Welcome to Game Hub!\n");
             Console.ResetColor();
         }
 
         public void ExitHub()
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("\nEncerrando o Hub de Jogos... Muito obrigada por passar este tempo com nós!\n");
-            Console.WriteLine("Volte sempre que quiser se divertir um pouco!");
+            Console.WriteLine("\nClosing Game Hub... Thanks for spending this time with us!\n");
+            Console.WriteLine("Come back whenever you want to have fun!");
             Console.ResetColor();
         }
 
         public void ShowMainMenu()
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine("\n Menu Principal \n");
+            Console.WriteLine("\n Main Menu \n");
             Console.ResetColor();
 
-            Console.WriteLine("\t1. Menu Jogadores");
-            Console.WriteLine("\t2. Ranking de Jogadores");
-            Console.WriteLine("\t3. Jogar Jogo da Velha");
-            Console.WriteLine("\t4. Jogar Batalha Naval");
-            Console.WriteLine("\t5. Sair do Jogo\n");
+            Console.WriteLine("\t1. Players Menu");
+            Console.WriteLine("\t2. Ranking");
+            Console.WriteLine("\t3. Play TicTacToe");
+            Console.WriteLine("\t4. Play BattleShip");
+            Console.WriteLine("\t5. Leave Game Hub\n");
 
-            Console.Write("Digite a opção desejada: ");
+            Console.Write("Enter your option: ");
         }
 
         public void ShowPlayersMenu()
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine("\n Menu Jogadores \n");
+            Console.WriteLine("\n Players Menu \n");
             Console.ResetColor();
 
-            Console.WriteLine("\t1. Cadastrar novo Jogador");
-            Console.WriteLine("\t2. Deletar Jogador");
-            Console.WriteLine("\t3. Detalhes Jogador");
-            Console.WriteLine("\t4. Voltar ao Menu Principal\n");
+            Console.WriteLine("\t1. Register new player");
+            Console.WriteLine("\t2. Delete player");
+            Console.WriteLine("\t3. Details of a player");
+            Console.WriteLine("\t4. Return to Main Menu\n");
             
-            Console.Write("Digite a opção desejada: ");
+            Console.Write("Enter your option: ");
+        }
+
+        public void ShowContinueMessage()
+        {
+            Console.WriteLine("\nPlase, press any key to continue...");
+            Console.ReadKey();
         }
 
     }

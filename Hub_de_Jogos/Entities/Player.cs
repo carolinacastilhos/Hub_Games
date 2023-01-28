@@ -14,6 +14,7 @@ namespace Hub_de_Jogos.Entities
         public int Defeats { get; private set; }
         public int Ties { get; private set; }
         public int Match { get; private set; }
+        public int Score { get; private set; }
 
         public Player(string nickname, string password)
         {
@@ -23,6 +24,7 @@ namespace Hub_de_Jogos.Entities
             Defeats = 0;
             Ties = 0;
             Match = 0;
+            Score = 0;
         }
 
         //métodos
@@ -50,5 +52,6 @@ namespace Hub_de_Jogos.Entities
             return Match;
         }
 
+        
     }
 }
