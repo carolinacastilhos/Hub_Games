@@ -8,28 +8,23 @@ namespace Hub_de_Jogos.View
 {
     public class Print
     {
-        public void RedWarning(string text)
+        public static void InvalidInputWarning()
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(text);
+            Console.WriteLine("\n Invalid Input. Please, try again.");
             Console.ResetColor();
+            Console.ReadKey();
+            Console.Clear();
         }
-
-        public void GreenWarning(string text)
-        {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(text);
-            Console.ResetColor();
-        }
-
-        public void WelcomeHub()
+        
+        public static void WelcomeHub()
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("Welcome to Game Hub!\n");
+            Console.WriteLine("\tWelcome to Game Hub!");
             Console.ResetColor();
         }
 
-        public void ExitHub()
+        public static void ExitHub()
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("\nClosing Game Hub... Thanks for spending this time with us!\n");
@@ -37,10 +32,11 @@ namespace Hub_de_Jogos.View
             Console.ResetColor();
         }
 
-        public void ShowMainMenu()
+        public static void ShowMainMenu()
         {
+            WelcomeHub();
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine("\n Main Menu \n");
+            Console.WriteLine("\n\t Main Menu \n");
             Console.ResetColor();
 
             Console.WriteLine("\t1. Players Menu");
@@ -49,13 +45,16 @@ namespace Hub_de_Jogos.View
             Console.WriteLine("\t4. Play BattleShip");
             Console.WriteLine("\t5. Leave Game Hub\n");
 
-            Console.Write("Enter your option: ");
+            Console.Write("\tEnter your option: ");
         }
 
-        public void ShowPlayersMenu()
+        public static void ShowPlayersMenu()
         {
+
+            Console.Clear();
+            WelcomeHub();
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine("\n Players Menu \n");
+            Console.WriteLine("\n\t Players Menu \n");
             Console.ResetColor();
 
             Console.WriteLine("\t1. Register new player");
@@ -63,13 +62,15 @@ namespace Hub_de_Jogos.View
             Console.WriteLine("\t3. Details of a player");
             Console.WriteLine("\t4. Return to Main Menu\n");
             
-            Console.Write("Enter your option: ");
+            Console.Write("\tEnter your option: ");
+
         }
 
-        public void ShowContinueMessage()
+        public static void ShowContinueMessage()
         {
             Console.WriteLine("\nPlase, press any key to continue...");
             Console.ReadKey();
+            Console.Clear();
         }
 
     }
