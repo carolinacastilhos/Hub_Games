@@ -7,7 +7,7 @@ namespace Hub_de_Jogos.Service
 {
     public class LoginPlayers
     {
-        private static string _pathPlayersData = @"../../../Repository/PlayersData.json"; //caminho relativo pro arquivo
+        private static string _pathPlayersData = @"../../../Repository/PlayersData.json";
 
         public static void ManipulatePlayers()
         {

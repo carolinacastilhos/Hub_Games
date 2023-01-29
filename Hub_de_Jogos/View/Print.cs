@@ -73,5 +73,22 @@ namespace Hub_de_Jogos.View
             Console.Clear();
         }
 
+        public static void ShowTieMessage()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("\n\tOops! It's a tie!");
+            Console.ResetColor();
+            Print.ShowContinueMessage();
+        }
+
+        public static void ShowVictoryMessage()
+        {
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("\n\tEnd of Match!");
+            Console.WriteLine("\n\tCongratulations {0}, you win!"); //ajustar nome do player que ganhou
+            Console.ResetColor();
+        }
+               
     }
 }
