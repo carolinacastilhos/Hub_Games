@@ -47,17 +47,15 @@ namespace Hub_de_Jogos.Service
         public static void StartTicTacToe()
         {
             GameBoardTicTacToe board = new GameBoardTicTacToe();
-
-            string player = "carol";
-
+                        
             WelcomeTicTacToe();
-            ShowTicTacToeTitle();
+            ShowTicTacToeTitle();                      
             board.DisplayGameBoard();
                         
-           // bool endOfGame = false;
+            // bool endOfGame = false;
                         
             Console.WriteLine();
-            Console.Write("{0}, in which position do you want to put your character? ", player);
+            Console.Write("{0}, in which position do you want to put your character? ");
             string move = Console.ReadLine();
             Console.WriteLine();
 

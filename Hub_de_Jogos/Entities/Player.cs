@@ -8,13 +8,13 @@ namespace Hub_de_Jogos.Entities
 {
     public class Player
     {
-        public string Nickname { get; private set; } = null!;
+        public string Nickname { get; private set; } = null!; 
         public string Password { get; private set; } = null!;
-        public int Victories { get; private set; }
-        public int Defeats { get; private set; }
-        public int Ties { get; private set; }
-        public int Match { get; private set; }
-        public int Score { get; private set; }
+        public int Victories { get; set; }
+        public int Defeats { get; set; }
+        public int Ties { get; set; }
+        public int Match { get; set; }
+        public int Score { get; set; }
 
         public Player(string nickname, string password)
         {
@@ -26,6 +26,7 @@ namespace Hub_de_Jogos.Entities
             Match = 0;
             Score = 0;
         }
+            
 
         //métodos
         public int WinMatches()

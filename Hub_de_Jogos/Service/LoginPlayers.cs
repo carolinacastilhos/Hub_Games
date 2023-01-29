@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using Hub_de_Jogos.View;
 using Hub_de_Jogos.Entities;
+using Newtonsoft.Json;
 
 namespace Hub_de_Jogos.Service
 {
     public class LoginPlayers
     {
+        private static string _pathPlayersData = @"../../../Repository/PlayersData.json"; //caminho relativo pro arquivo
+
         public static void ManipulatePlayers()
         {
             int option;
@@ -22,10 +21,10 @@ namespace Hub_de_Jogos.Service
                 switch (option)
                 {
                     case 1:
-                        //TODO register player
+                        RegisterPlayer();
                         break;
                     case 2:
-                        //TODO delete player
+                        DeletePlayer();
                         break;
                     case 3:
                         //TODO details
@@ -43,7 +42,30 @@ namespace Hub_de_Jogos.Service
 
         public static void RegisterPlayer()
         {
-            Player newPlayer = new Player(string nicname, string password); //como fazer para adicionar o nome e senha do player? no construtor?
+            Console.Write("\n\tWhat is your nickname? ");
+            string nickname = Console.ReadLine()!;
+            Console.Write("\n\tChoose a password: ");
+            string password = Console.ReadLine()!;
+
+            Player player = new Player (nickname, password);
+
+            string jsonPlayers = File.ReadAllText(_pathPlayersData);
+
+            var playersData = JsonConvert.DeserializeObject<List<Player>>(jsonPlayers);
+            playersData.Add(player);
+            jsonPlayers = JsonConvert.SerializeObject(playersData);
+            File.WriteAllText(_pathPlayersData, jsonPlayers);
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\nPlayer successfully registered.");
+            Console.ResetColor();
+            Print.ShowContinueMessage();
+            //Thread.Sleep(5000);
+        }
+
+        public static void DeletePlayer()
+        {
+
         }
     }
 }

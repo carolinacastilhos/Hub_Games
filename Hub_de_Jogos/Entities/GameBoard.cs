@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hub_de_Jogos.Entities
 {
-    public class GameBoard
+    public class GameBoard //ver sobre abstrata
     {
         public string[,] board;
 
