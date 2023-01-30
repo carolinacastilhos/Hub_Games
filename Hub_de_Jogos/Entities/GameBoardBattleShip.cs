@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,13 +15,13 @@ namespace Hub_de_Jogos.Entities
         public static string[,] InitializeGameBoardPlayer1()
         {
             int counter = 1;
-            
+                        
             for (int row = 0; row < 8; row++)
             {
                 for (int col = 0; col < 8; col++)
                 {
-                    gameBoardPlayer1[row, col] = $"{counter}";
-                    counter++;                   
+                    gameBoardPlayer1[row, col] += $"{counter}";
+                    counter++;                                        
                 }
             }
             return gameBoardPlayer1;
@@ -29,7 +30,7 @@ namespace Hub_de_Jogos.Entities
         public static string[,] InitializeGameBoardPlayer2()
         {
             int counter = 1;
-
+            
             for (int row = 0; row < 8; row++)
             {
                 for (int col = 0; col < 8; col++)
@@ -49,24 +50,7 @@ namespace Hub_de_Jogos.Entities
                 for (int col = 0; col < 8; col++)
                 {
                     Console.Write("| ");
-                    if (gameBoardPlayer1[row, col] == "X")
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.BackgroundColor = ConsoleColor.Red;
-                        Console.Write($"{gameBoardPlayer1[row, col]}");
-                        Console.ResetColor();
-                    }
-                    else if (gameBoardPlayer1[row, col] == "O")
-                    {
-                        Console.ForegroundColor = ConsoleColor.DarkCyan;
-                        Console.BackgroundColor = ConsoleColor.DarkCyan;
-                        Console.Write($"{gameBoardPlayer1[row, col]}");
-                        Console.ResetColor();
-                    }
-                    else
-                    {
-                        Console.Write($"{gameBoardPlayer1[row, col]}");
-                    }                    
+                    Console.Write($"{gameBoardPlayer1[row, col]}");                                    
                     Console.Write(" |");
                 }
                 Console.WriteLine();
@@ -82,7 +66,7 @@ namespace Hub_de_Jogos.Entities
                 for (int col = 0; col < 8; col++)
                 {
                     Console.Write("| ");
-                    if (gameBoardPlayer2[row, col] == "X")
+                    /*if (gameBoardPlayer2[row, col] == "X")
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.BackgroundColor = ConsoleColor.Red;
@@ -97,9 +81,9 @@ namespace Hub_de_Jogos.Entities
                         Console.ResetColor();
                     }
                     else
-                    {
+                    {*/
                         Console.Write($"{gameBoardPlayer2[row, col]}");
-                    }
+                    //}
                     Console.Write(" |");
                 }
                 Console.WriteLine();
