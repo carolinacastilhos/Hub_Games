@@ -30,7 +30,7 @@ namespace Hub_de_Jogos
                         TicTacToe.WelcomeTicTacToe();
                         break;
                     case 4:
-                        //TODO BattleShip
+                        BattleShip.WelcomeBattleShip();
                         break;
                     case 5:
                         Print.ExitHub();
