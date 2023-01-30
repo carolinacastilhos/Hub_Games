@@ -8,14 +8,14 @@ namespace Hub_de_Jogos.Entities
 {
     public class Player
     {
-        public string Nickname { get; private set; } = null!; 
+        public string Nickname { get; set; } = null!; 
         public string Password { get; private set; } = null!;
         public int Victories { get; set; }
         public int Defeats { get; set; }
         public int Ties { get; set; }
         public int Match { get; set; }
         public int Score { get; set; }
-        public char Character { get; set; }
+        public string Character { get; set; }
 
         public Player(string nickname, string password)
         {

@@ -27,7 +27,7 @@ namespace Hub_de_Jogos
                         //TODO ranking
                         break;
                     case 3:
-                        TicTacToe.StartTicTacToe();
+                        TicTacToe.WelcomeTicTacToe();
                         break;
                     case 4:
                         //TODO BattleShip

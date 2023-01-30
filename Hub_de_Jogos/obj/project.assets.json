@@ -61,11 +61,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\CursoIma\\Projetos Visual Studio\\Hub_de_Jogos\\Hub_de_Jogos\\Hub_de_Jogos.csproj",
+      "projectUniqueName": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\CursoIma\\GameHub\\Hub_de_Jogos\\Hub_de_Jogos\\Hub_de_Jogos.csproj",
       "projectName": "Hub_de_Jogos",
-      "projectPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\CursoIma\\Projetos Visual Studio\\Hub_de_Jogos\\Hub_de_Jogos\\Hub_de_Jogos.csproj",
+      "projectPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\CursoIma\\GameHub\\Hub_de_Jogos\\Hub_de_Jogos\\Hub_de_Jogos.csproj",
       "packagesPath": "C:\\Users\\carol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\CursoIma\\Projetos Visual Studio\\Hub_de_Jogos\\Hub_de_Jogos\\obj\\",
+      "outputPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\CursoIma\\GameHub\\Hub_de_Jogos\\Hub_de_Jogos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

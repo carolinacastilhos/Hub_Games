@@ -4,7 +4,6 @@ using Hub_de_Jogos.View;
 namespace Hub_de_Jogos.Service
 {
     public class TicTacToe
-
     {
         public static void WelcomeTicTacToe()
         {
@@ -26,6 +25,8 @@ namespace Hub_de_Jogos.Service
             Console.Write("\n\tPress any key to start... ");
             Console.ReadKey();
             Console.Clear();
+
+            StartTicTacToe();
         }
 
         public static void ShowTicTacToeTitle()
@@ -39,107 +40,140 @@ namespace Hub_de_Jogos.Service
 
         public static void StartTicTacToe()
         {
-            GameBoardTicTacToe board = new GameBoardTicTacToe();
 
-            WelcomeTicTacToe();
             ShowTicTacToeTitle();
+            GameBoardTicTacToe.InititalizeGameBoard();
+            GameBoardTicTacToe.DisplayGameBoard();
 
             Player player1 = new Player();
-            player1.Character = 'X';
+            player1.Character = "X";
+            player1.Nickname = "Carol";
             Player player2 = new Player();
-            player2.Character = 'O';
+            player2.Character = "O";
+            player2.Nickname = "Bruno";
             Player currentPlayer = player1;
 
-            int turnCounter = 0;
-            bool play = true;            
+            int turnCounter = 1;
 
-            while (play)
-            {
-
-                board.DisplayGameBoard();
-                Console.Write("\n{0}, in which position do you want to put your character {1}? ", currentPlayer, currentPlayer.Character);
-                int.TryParse(Console.ReadLine(), out int playerMove);
-                Console.WriteLine();
-
-                if (board[row, col] == playerMove)
-                {
-                    board[row, col] = currentPlayer.Character;
-                }
-
-                /*if (playerMove < 1 || playerMove > 9)
-                {
-                    Print.InvalidInputWarning();
-                }*/
-
-
-                ChangeCurrentPlayer(currentPlayer, player1, player2);
-                turnCounter++;
-
-
-                if (turnCounter == 9)
-                {
-                    TictactoeTie(player1, player2);
-                    play = false;
-                }
-                
-                /*if ()
-                {
-                    TictactoeWin(player1, player2, currentPlayer);
-                    play = false;
-                }*/
-            }
-        }
-
-        public void ChangingGameBoard(GameBoardTicTacToe[,] board, int playerMove)
-        {
-            
-        }
-
-        public static void PlayersMoves(Player currentPlayer, Player player1, Player player2)
-        {
-            Console.Write("\n{0}, in which position do you want to put your character {1}? ", currentPlayer, currentPlayer.Character);
+            Console.Write("\n{0}, in which position do you want to put your character {1}? ", currentPlayer.Nickname, currentPlayer.Character);
             int.TryParse(Console.ReadLine(), out int playerMove);
             Console.WriteLine();
 
-            /*if (playerMove < 1 || playerMove > 9)
+            Console.Clear();
+
+            while (turnCounter < 9)
             {
-                Print.InvalidInputWarning();
-            }*/
+                ShowTicTacToeTitle();
 
+                int counter = 1;
+                for (int row = 0; row < 3; row++)
+                {
+                    for (int col = 0; col < 3; col++)
+                    {
+                        if (counter == playerMove)
+                        {
+                            if (GameBoardTicTacToe.board[row, col] == "X" || GameBoardTicTacToe.board[row, col] == "O")
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("\n This position is taken. Please, choose another one.");
+                                Console.ResetColor();
+                                Console.ReadKey();
+                                Console.Clear();
+                                break;
+                            }
+                            else
+                            {
+                                GameBoardTicTacToe.board[row, col] = currentPlayer.Character;
 
+                            }
+                        }
+                        counter++;
+                    }
+                }
+
+                GameBoardTicTacToe.DisplayGameBoard();
+
+                //check diagonals
+                if (GameBoardTicTacToe.board[0, 0] == GameBoardTicTacToe.board[1, 1] && GameBoardTicTacToe.board[1, 1] == GameBoardTicTacToe.board[2, 2]
+                 || GameBoardTicTacToe.board[0, 2] == GameBoardTicTacToe.board[1, 1] && GameBoardTicTacToe.board[1, 1] == GameBoardTicTacToe.board[2, 0])
+                {
+                    TictactoeWin(player1, player2, currentPlayer);
+                    break;
+                }
+
+                //check rows
+                if (GameBoardTicTacToe.board[0, 0] == GameBoardTicTacToe.board[0, 1] && GameBoardTicTacToe.board[0, 1] == GameBoardTicTacToe.board[0, 2]
+                    || GameBoardTicTacToe.board[1, 0] == GameBoardTicTacToe.board[1, 1] && GameBoardTicTacToe.board[1, 1] == GameBoardTicTacToe.board[1, 2]
+                    || GameBoardTicTacToe.board[2, 0] == GameBoardTicTacToe.board[2, 1] && GameBoardTicTacToe.board[2, 1] == GameBoardTicTacToe.board[2, 2])
+                {
+                    TictactoeWin(player1, player2, currentPlayer);
+                    break;
+                }
+
+                //check columns
+                if (GameBoardTicTacToe.board[0, 0] == GameBoardTicTacToe.board[1, 0] && GameBoardTicTacToe.board[1, 0] == GameBoardTicTacToe.board[2, 0]
+                    || GameBoardTicTacToe.board[0, 1] == GameBoardTicTacToe.board[1, 1] && GameBoardTicTacToe.board[1, 1] == GameBoardTicTacToe.board[2, 1]
+                    || GameBoardTicTacToe.board[0, 2] == GameBoardTicTacToe.board[1, 2] && GameBoardTicTacToe.board[1, 2] == GameBoardTicTacToe.board[2, 2])
+                {
+                    TictactoeWin(player1, player2, currentPlayer);
+                    break;
+                }
+
+                if (currentPlayer == player1)
+                {
+                    currentPlayer = player2;
+                }                    
+                else
+                {
+                    currentPlayer = player1;
+                }                    
+
+                Console.Write("\n{0}, in which position do you want to put your character {1}? ", currentPlayer.Nickname, currentPlayer.Character);
+                int.TryParse(Console.ReadLine(), out playerMove);
+                Console.WriteLine();
+
+                turnCounter++;
+                Console.Clear();
+            }
+
+            if (turnCounter == 9)
+            {
+                ShowTicTacToeTitle();
+                GameBoardTicTacToe.DisplayGameBoard();
+                TictactoeTie(player1, player2);
+            }
         }
-
-        public static Player ChangeCurrentPlayer(Player currentPlayer, Player player1, Player player2)
-        {
-            return currentPlayer == player1 ? player2 : player1;
-        }
-
+        
         public static void TictactoeTie(Player player1, Player player2)
-        {
-            player1.TieMatches();
-            player1.AddPlayedMatches();
-            player2.TieMatches();
-            player2.AddPlayedMatches();
-            Print.ShowTieMessage();
-        }
+            {
+                player1.TieMatches();
+                player1.AddPlayedMatches();
+                player2.TieMatches();
+                player2.AddPlayedMatches();
+                Print.ShowTieMessage();
+            }
 
         public static void TictactoeWin(Player player1, Player player2, Player currentPlayer)
         {
-            player1.AddPlayedMatches();
-            player2.AddPlayedMatches();
-            currentPlayer.WinMatches();
-            
-            if (currentPlayer == player1)
-            {
-                player2.LoseMatches();
-            }
-            else if (currentPlayer == player2)
-            {
-                player1.LoseMatches();
-            }
+                player1.AddPlayedMatches();
+                player2.AddPlayedMatches();
+                currentPlayer.WinMatches();
 
-            Print.ShowVictoryMessage(); //TODO botar nome do currentplayer na mensagem de vitoria
-        }        
-                       
+                if (currentPlayer == player1)
+                {
+                    player2.LoseMatches();
+                }
+                else if (currentPlayer == player2)
+                {
+                    player1.LoseMatches();
+                }
+
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("\n\tEnd of Match!");
+            Console.WriteLine("\n\tCongratulations {0}, you win!", currentPlayer.Nickname);
+            Console.ResetColor();
+            Print.ShowContinueMessage();
+        }       
+
     }
-}
+} 
